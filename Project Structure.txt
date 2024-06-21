@@ -1,0 +1,72 @@
+sales-management-system/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── dao/
+│   │   │   │   ├── EmployeeDAO.java
+│   │   │   │   ├── PersonDAO.java
+│   │   │   │   ├── PhoneDAO.java
+│   │   │   │   ├── ItemDAO.java
+│   │   │   │   ├── TransactionDAO.java
+│   │   │   │   ├── PurchaseTransactionDAO.java
+│   │   │   │   ├── PaymentDAO.java
+│   │   │   │   ├── PurchaseDetailDAO.java
+│   │   │   │   └── TransactionDetailDAO.java
+│   │   │   │
+│   │   │   ├── entities/
+│   │   │   │   ├── Employee.java
+│   │   │   │   ├── Person.java
+│   │   │   │   ├── Phone.java
+│   │   │   │   ├── Item.java
+│   │   │   │   ├── Transaction.java
+│   │   │   │   ├── PurchaseTransaction.java
+│   │   │   │   ├── Payment.java
+│   │   │   │   ├── PurchaseDetail.java
+│   │   │   │   └── TransactionDetail.java
+│   │   │   │
+│   │   │   ├── gui/
+│   │   │   │   ├── MainFrame.java
+│   │   │   │   ├── EmployeeForm.java
+│   │   │   │   ├── PersonForm.java
+│   │   │   │   ├── PhoneForm.java
+│   │   │   │   ├── ItemForm.java
+│   │   │   │   ├── TransactionForm.java
+│   │   │   │   ├── PurchaseTransactionForm.java
+│   │   │   │   ├── PaymentForm.java
+│   │   │   │   ├── PurchaseDetailForm.java
+│   │   │   │   └── TransactionDetailForm.java
+│   │   │   │
+│   │   │   └── utils/
+│   │   │       ├── HibernateUtil.java
+│   │   │       └── AppUtil.java
+│   │   │
+│   │   └── resources/
+│   │       └── hibernate.cfg.xml
+│   │
+│   └── test/
+│       └── java/
+│           ├── dao/
+│           │   ├── EmployeeDAOTest.java
+│           │   ├── PersonDAOTest.java
+│           │   ├── PhoneDAOTest.java
+│           │   ├── ItemDAOTest.java
+│           │   ├── TransactionDAOTest.java
+│           │   ├── PurchaseTransactionDAOTest.java
+│           │   ├── PaymentDAOTest.java
+│           │   ├── PurchaseDetailDAOTest.java
+│           │   └── TransactionDetailDAOTest.java
+│           │
+│           └── entities/
+│               ├── EmployeeTest.java
+│               ├── PersonTest.java
+│               ├── PhoneTest.java
+│               ├── ItemTest.java
+│               ├── TransactionTest.java
+│               ├── PurchaseTransactionTest.java
+│               ├── PaymentTest.java
+│               ├── PurchaseDetailTest.java
+│               └── TransactionDetailTest.java
+│
+├── pom.xml  (for Maven)
+└── build.gradle  (for Gradle)
