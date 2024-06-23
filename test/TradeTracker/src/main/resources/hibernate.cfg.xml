@@ -8,7 +8,7 @@
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/salesdb</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">Ma7moud%Wa7eed&*123</property>
+        <property name="hibernate.connection.password">Ma7moud%Wa7eed&amp;*123</property>
 
         <!-- JDBC connection pool settings ... using built-in test pool -->
         <property name="hibernate.c3p0.min_size">5</property>
