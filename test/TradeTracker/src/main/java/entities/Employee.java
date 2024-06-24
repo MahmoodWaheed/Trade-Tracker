@@ -20,6 +20,16 @@ public class Employee {
     @Column(nullable = false)
     private String role;
 
+    // Default constructor
+    public Employee() {
+    }
+
+    // Constructor with id
+    public Employee(int id) {
+        this.id = id;
+    }
+
+
     public String getName() {
         return name;
     }

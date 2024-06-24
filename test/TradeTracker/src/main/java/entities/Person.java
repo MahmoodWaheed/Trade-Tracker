@@ -22,6 +22,14 @@ public class Person {
 
     @Column(nullable = true)
     private String location;
+    // Default constructor
+    public Person() {
+    }
+
+    // Constructor with id
+    public Person(int id) {
+        this.id = id;
+    }
 
     public int getId() {
         return id;

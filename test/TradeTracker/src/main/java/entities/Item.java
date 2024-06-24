@@ -29,6 +29,15 @@ public class Item {
     @Column(nullable = false)
     private double purchasingPrice;
 
+    // Default constructor
+    public Item() {
+    }
+
+    // Constructor with id
+    public Item(int id) {
+        this.id = id;
+    }
+
     // Getters and Setters
 
     public int getId() {
