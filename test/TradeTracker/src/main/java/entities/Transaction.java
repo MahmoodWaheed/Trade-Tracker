@@ -146,7 +146,8 @@ public class Transaction {
         return salesRep;
     }
 
-    public void setSalesRep(Employee salesRep) {
+    public void
+        setSalesRep(Employee salesRep) {
         this.salesRep = salesRep;
     }
 
