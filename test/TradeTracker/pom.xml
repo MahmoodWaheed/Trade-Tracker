@@ -39,11 +39,15 @@
             <version>1.4</version>
         </dependency>
 
+
+
+        <!-- https://mvnrepository.com/artifact/org.swinglabs.swingx/swingx-all -->
         <dependency>
-            <groupId>org.swinglabs</groupId>
+            <groupId>org.swinglabs.swingx</groupId>
             <artifactId>swingx-all</artifactId>
             <version>1.6.4</version>
         </dependency>
+
 
     </dependencies>
 </project>
