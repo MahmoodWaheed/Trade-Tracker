@@ -409,8 +409,11 @@ import entities.Person;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.DefaultTableCellRenderer;
+
 import com.toedter.calendar.JDateChooser;
 import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
+
 import java.awt.*;
 import java.util.Date;
 import java.util.List;
@@ -444,21 +447,28 @@ public class SalesForm extends JFrame {
 
         // Top panel
         JPanel topPanel = new JPanel(new GridLayout(3, 2));
+        topPanel.setBackground(Color.decode("#E6F7FF"));
 
         // Transaction ID
-        topPanel.add(new JLabel("Transaction ID:"));
+        JLabel transactionIdLabel = new JLabel("Transaction ID:");
+        transactionIdLabel.setForeground(Color.decode("#0047AB"));
+        topPanel.add(transactionIdLabel);
         transactionIdField = new JTextField("Auto-generated", 15);
         transactionIdField.setEditable(false);
         topPanel.add(transactionIdField);
 
         // Person Name
-        topPanel.add(new JLabel("Person Name:"));
+        JLabel personNameLabel = new JLabel("Person Name:");
+        personNameLabel.setForeground(Color.decode("#0047AB"));
+        topPanel.add(personNameLabel);
         personNameField = new JTextField();
         topPanel.add(personNameField);
         AutoCompleteDecorator.decorate(personNameField, getPersonNames(), false);
 
         // Transaction Date
-        topPanel.add(new JLabel("Transaction Date:"));
+        JLabel transactionDateLabel = new JLabel("Transaction Date:");
+        transactionDateLabel.setForeground(Color.decode("#0047AB"));
+        topPanel.add(transactionDateLabel);
         transactionDateChooser = new JDateChooser(new Date());
         topPanel.add(transactionDateChooser);
 
@@ -472,11 +482,25 @@ public class SalesForm extends JFrame {
             }
         };
         transactionDetailsTable = new JTable(tableModel);
+
+        // Alternating row colors
+        transactionDetailsTable.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+            @Override
+            public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+                Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                if (!isSelected) {
+                    c.setBackground(row % 2 == 0 ? Color.decode("#D9E6F5") : Color.WHITE);
+                }
+                return c;
+            }
+        });
+
         JScrollPane scrollPane = new JScrollPane(transactionDetailsTable);
         add(scrollPane, BorderLayout.CENTER);
 
         // Bottom panel
         JPanel bottomPanel = new JPanel(new GridLayout(2, 1));
+        bottomPanel.setBackground(Color.decode("#E6F7FF"));
 
         JPanel totalAmountPanel = new JPanel(new GridLayout(1, 2));
         totalAmountPanel.add(new JLabel("Total Amount:"));
@@ -486,12 +510,25 @@ public class SalesForm extends JFrame {
         bottomPanel.add(totalAmountPanel);
 
         JPanel buttonPanel = new JPanel();
+        buttonPanel.setBackground(Color.decode("#E6F7FF"));
         saveButton = new JButton("Save");
+        saveButton.setBackground(Color.decode("#0047AB"));
+        saveButton.setForeground(Color.WHITE);
         updateButton = new JButton("Update");
+        updateButton.setBackground(Color.decode("#0047AB"));
+        updateButton.setForeground(Color.WHITE);
         deleteButton = new JButton("Delete");
+        deleteButton.setBackground(Color.decode("#0047AB"));
+        deleteButton.setForeground(Color.WHITE);
         prevButton = new JButton("Previous");
+        prevButton.setBackground(Color.decode("#0047AB"));
+        prevButton.setForeground(Color.WHITE);
         nextButton = new JButton("Next");
+        nextButton.setBackground(Color.decode("#0047AB"));
+        nextButton.setForeground(Color.WHITE);
         printButton = new JButton("Print");
+        printButton.setBackground(Color.decode("#0047AB"));
+        printButton.setForeground(Color.WHITE);
 
         buttonPanel.add(saveButton);
         buttonPanel.add(updateButton);
@@ -504,6 +541,8 @@ public class SalesForm extends JFrame {
         add(bottomPanel, BorderLayout.SOUTH);
 
         addRowButton = new JButton("Add Row");
+        addRowButton.setBackground(Color.decode("#0047AB"));
+        addRowButton.setForeground(Color.WHITE);
         addRowButton.addActionListener(e -> addRow());
         buttonPanel.add(addRowButton);
 
@@ -596,6 +635,7 @@ public class SalesForm extends JFrame {
         try {
             int transactionId = Integer.parseInt(transactionIdField.getText());
             Date transactionDate = transactionDateChooser.getDate();
+            calculateTotalAmount();
             double totalAmount = Double.parseDouble(totalAmountField.getText());
             String personName = personNameField.getText();
 
@@ -606,18 +646,13 @@ public class SalesForm extends JFrame {
             }
 
             Transaction transaction = transactionDAO.getTransactionById(transactionId);
-            if (transaction == null) {
-                JOptionPane.showMessageDialog(this, "Transaction not found", "Error", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-
             transaction.setTransactionDate(transactionDate);
             transaction.setTotalAmount(totalAmount);
             transaction.setPerson(person);
 
             transactionDAO.updateTransaction(transaction);
 
-            // Update transaction details if needed (you can add logic to handle this part)
+            // You can add code to update transaction details if needed (you can add logic to handle this part)
 
             JOptionPane.showMessageDialog(this, "Transaction updated successfully");
             loadAllTransactions(); // Refresh table data
@@ -703,6 +738,10 @@ public class SalesForm extends JFrame {
         SwingUtilities.invokeLater(SalesForm::new);
     }
 }
+
+
+
+
 
 
 
