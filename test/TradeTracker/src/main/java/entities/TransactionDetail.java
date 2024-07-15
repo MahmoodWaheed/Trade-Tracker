@@ -127,5 +127,8 @@ public class TransactionDetail {
     public void setItem(Item item) {
         this.item = item;
     }
+    public void setCumulativePrice(double comulativePrice) {
+        this.comulativePrice = comulativePrice;
+    }
 }
 

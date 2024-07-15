@@ -93,10 +93,11 @@ package dao;
  * PROJECT NAME: TradeTracker
  */
 import entities.Transaction;
+import entities.Person;
 import org.hibernate.Session;
 import utils.HibernateUtil;
-import entities.Person;
 import java.util.List;
+import java.util.ArrayList;
 
 public class TransactionDAO {
 
@@ -171,6 +172,7 @@ public class TransactionDAO {
             return null;
         }
     }
+
     public Person getPersonByName(String name) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.createQuery("from Person where name = :name", Person.class)
@@ -182,4 +184,19 @@ public class TransactionDAO {
         }
     }
 
+    // Method to get all person names
+    public List<String> getAllPersonNames() {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            List<Person> persons = session.createQuery("from Person", Person.class).list();
+            List<String> personNames = new ArrayList<>();
+            for (Person person : persons) {
+                personNames.add(person.getName());
+            }
+            return personNames;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
 }
+
