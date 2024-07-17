@@ -57,3 +57,17 @@ Below is the schema of the database used in this project:
 git clone https://github.com/MahmoodWaheed/Trade-Tracker.git
 cd Trade-Tracker
 
+2. Set Up the database:
+ * Create a MySQL database named salesdb.
+ * Run the provided SQL script to set up the tables and initial data.
+
+3. Configure database connection:
+  * Edit the hibernate.cfg.xml file in the src/main/resources directory to match your MySQL database configuration.
+
+4. Build the project:
+  mvn clean install
+
+5. Run the application:
+ mvn exec:java -Dexec.mainClass="gui.SalesForm"
+
+
