@@ -54,6 +54,6 @@ Below is the schema of the database used in this project:
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/MahmoodWaheed/Trade-Tracker.git
+git clone https://github.com//MahmoodWaheed//Trade-Tracker.git
 cd Trade-Tracker
 
