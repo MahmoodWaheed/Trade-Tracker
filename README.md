@@ -70,4 +70,9 @@ cd Trade-Tracker
 5. Run the application:
  mvn exec:java -Dexec.mainClass="gui.SalesForm"
 
+6. Once the application is running, you can start tracking your trades and managing sales efficiently. Navigate through the user-friendly interface of the SalesForm to input, view, and update sales information.  
+7. Don't forget to regularly back up your sales data to ensure its safety and integrity. You can export reports and analyze your sales performance for better decision-making.  
+8. If you encounter any issues or have suggestions for improvements, feel free to contribute to the project on GitHub or reach out to the developer MahmoodWaheed for support.  
+9. Thank you for using Trade Tracker to streamline your sales management processes. Happy tracking!
+
 
