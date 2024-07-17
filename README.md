@@ -58,11 +58,11 @@ git clone https://github.com/MahmoodWaheed/Trade-Tracker.git
 cd Trade-Tracker
 
 2. Set Up the database:
- * Create a MySQL database named salesdb.
- * Run the provided SQL script to set up the tables and initial data.
+ Create a MySQL database named salesdb.
+ Run the provided SQL script to set up the tables and initial data.
 
 3. Configure database connection:
-  * Edit the hibernate.cfg.xml file in the src/main/resources directory to match your MySQL database configuration.
+ Edit the hibernate.cfg.xml file in the src/main/resources directory to match your MySQL database configuration.
 
 4. Build the project:
   mvn clean install
@@ -70,11 +70,14 @@ cd Trade-Tracker
 5. Run the application:
  mvn exec:java -Dexec.mainClass="gui.SalesForm"
 
-6. Once the application is running, you can start tracking your trades and managing sales efficiently. Navigate through the user-friendly interface of the SalesForm to input, view, and update sales information.  
-7. Don't forget to regularly back up your sales data to ensure its safety and integrity. You can export reports and analyze your sales performance for better decision-making.  
-8. If you encounter any issues or have suggestions for improvements, feel free to contribute to the project on GitHub or reach out to the developer MahmoodWaheed for support.  
+6. Once the application is running, you can start tracking your trades and managing sales efficiently. Navigate through the user-friendly interface of the SalesForm to input, view, and update sales information.
+ 
+7. Don't forget to regularly back up your sales data to ensure its safety and integrity. You can export reports and analyze your sales performance for better decision-making.
+
+8. If you encounter any issues or have suggestions for improvements, feel free to contribute to the project on GitHub or reach out to the developer MahmoodWaheed for support.
+
 9. Thank you for using Trade Tracker to streamline your sales management processes. Happy tracking!
-...
+
 
 ## Usage
 Use the GUI to manage employees, suppliers, customers, and items.
