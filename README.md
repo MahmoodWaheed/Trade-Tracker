@@ -74,8 +74,9 @@ cd Trade-Tracker
 7. Don't forget to regularly back up your sales data to ensure its safety and integrity. You can export reports and analyze your sales performance for better decision-making.  
 8. If you encounter any issues or have suggestions for improvements, feel free to contribute to the project on GitHub or reach out to the developer MahmoodWaheed for support.  
 9. Thank you for using Trade Tracker to streamline your sales management processes. Happy tracking!
+...
 
-##Usage
+## Usage
 Use the GUI to manage employees, suppliers, customers, and items.
 Record new transactions and update existing ones.
 Generate reports on sales and financial balances.
