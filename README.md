@@ -31,4 +31,4 @@ The Sales Management System is a Java-based application designed to manage sales
 - Maven
 
 ## Project Structure
-![Project Structure](E:\SalesProgramProject\Project_Structure.jpeg)
+![Project Structure](E:\\SalesProgramProject\\Project_Structure.png)
