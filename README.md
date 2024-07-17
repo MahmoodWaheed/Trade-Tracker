@@ -31,4 +31,29 @@ The Sales Management System is a Java-based application designed to manage sales
 - Maven
 
 ## Project Structure
-![Project Structure](E:\\SalesProgramProject\\Project_Structure.png)
+![Project_Structure](https://github.com/user-attachments/assets/a7db3f53-ac60-4d5a-b399-c212d1535ed4)
+
+
+## Database Schema
+
+Below is the schema of the database used in this project:
+
+
+![Database Schema](https://github.com/user-attachments/assets/89ea83ed-a574-48d3-a123-17564f3f1f62)
+
+## Getting Started
+
+### Prerequisites
+
+- [Java JDK 17 or higher](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- [Maven](https://maven.apache.org/download.cgi)
+- [MySQL](https://dev.mysql.com/downloads/mysql/)
+
+### Installation
+
+1. Clone the repository:
+
+```sh
+git clone https://github.com/yourusername/SalesManagementSystem.git
+cd SalesManagementSystem
+
