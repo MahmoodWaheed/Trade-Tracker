@@ -894,8 +894,7 @@ public class SalesForm extends JFrame {
     private TransactionDAO transactionDAO;
     private TransactionDetailDAO transactionDetailDAO;
     private JTextField transactionIdField;
-    private JButton addNewTransactionButton;
-    private JButton saveButton, updateButton, deleteButton, prevButton, nextButton, printButton;
+    private JButton saveButton, updateButton, deleteButton,addNewTransactionButton, prevButton, nextButton, printButton;
 
     private List<Transaction> transactions = new ArrayList<>();
     private int currentIndex = -1;
@@ -919,7 +918,7 @@ public class SalesForm extends JFrame {
         JLabel transactionIdLabel = new JLabel("Transaction ID:");
         transactionIdLabel.setForeground(Color.decode("#0047AB"));
         topPanel.add(transactionIdLabel);
-        transactionIdField = new JTextField("Auto-generated", 15);
+        transactionIdField = new JTextField("Auto-generated", 15); // here we need to add the real text (transaction id ) instade of Auto-generated
         transactionIdField.setEditable(false);
         topPanel.add(transactionIdField);
 
@@ -952,9 +951,10 @@ public class SalesForm extends JFrame {
         tableModel.addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
-                if (e.getType() == TableModelEvent.UPDATE) {
-                    int row = e.getFirstRow();
-                    int column = e.getColumn();
+                if (e.getType() == TableModelEvent.UPDATE) {  // Check if the event type is an update event
+                    int row = e.getFirstRow();               // Get the row index of the updated cell
+                    int column = e.getColumn();             // Get the column index of the updated
+                     // Check if the updated column is one of the specified columns (Product ID, Quantity, or Selling Price)
                     if (column == 0 || column == 1 || column == 2) { // Product ID, Quantity, Selling Price columns
                         updateCumulativePrice(row);
                         calculateTotalAmount();
@@ -967,17 +967,20 @@ public class SalesForm extends JFrame {
         transactionDetailsTable.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
             @Override
             public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+                // Get the default cell renderer component for the given cell
                 Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
-                if (!isSelected) {
-                    c.setBackground(row % 2 == 0 ? Color.decode("#D9E6F5") : Color.WHITE);
+                // Check if the row is not selected
+                if (!isSelected) {      // Set the background color based on the row index
+                    c.setBackground(row % 2 == 0 ? Color.decode("#D9E6F5") : Color.WHITE);   // Even rows get a light blue color (#D9E6F5), odd rows get a white color
                 }
-                return c;
+                return c; // Return the component with the modified background color
             }
         });
 
 
         // Enable Enter key navigation
         enableEnterKeyNavigation(transactionDetailsTable);
+
 
         JScrollPane scrollPane = new JScrollPane(transactionDetailsTable);
         add(scrollPane, BorderLayout.CENTER);
@@ -1119,6 +1122,7 @@ public class SalesForm extends JFrame {
             JOptionPane.showMessageDialog(this, "Error saving transaction: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+
 
     private void updateTransaction() {
         try {
@@ -1272,12 +1276,15 @@ public class SalesForm extends JFrame {
     }
 
     private void clearFields() {
-        transactionIdField.setText("Auto-generated");
+        int nextTransactionId = transactionDAO.getNextTransactionId();
+        System.out.println(nextTransactionId);
+        transactionIdField.setText(String.valueOf(nextTransactionId));
         transactionDateChooser.setDate(new Date());
         personNameField.setText("");
         totalAmountField.setText("");
         tableModel.setRowCount(0);
-        currentIndex = -1;
+//        currentIndex = -1;
+        tableModel.addRow(new Object[]{"", "", "", ""});  // Add a new row
     }
 
     private List<String> getPersonNames() {
@@ -1288,11 +1295,11 @@ public class SalesForm extends JFrame {
         table.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                int column = table.getSelectedColumn();
+                int column = table.getSelectedColumn(); // Get the currently selected column and row
                 int row = table.getSelectedRow();
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                    e.consume();
-                    if (table.getCellEditor() != null) {
+                    e.consume();                      // Consume the event to prevent the default action
+                    if (table.getCellEditor() != null) { // If a cell is being edited, stop editing
                         table.getCellEditor().stopCellEditing();
                     }
                     if (column == table.getColumnCount() - 1) {
@@ -1301,31 +1308,16 @@ public class SalesForm extends JFrame {
                     } else {
                         column++;
                     }
+                    // If the selected row is the last row, add a new row
                     if (row == table.getRowCount()) {
-                        tableModel.addRow(new Object[table.getColumnCount()]);
+                        ((DefaultTableModel) table.getModel()).addRow(new Object[table.getColumnCount()]);
                     }
-                    table.changeSelection(row, column, false, false);
+                    table.changeSelection(row, column, false, false); // Change the selection to the new row and column
                 }
             }
         });
     }
-
     public static void main(String[] args) {
         SwingUtilities.invokeLater(SalesForm::new);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

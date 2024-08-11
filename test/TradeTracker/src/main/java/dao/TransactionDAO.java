@@ -111,6 +111,7 @@ public class TransactionDAO {
             if (txn != null) {
                 txn.rollback();
             }
+            System.err.println("Error Saving Transaction: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -153,6 +154,8 @@ public class TransactionDAO {
             txn = session.beginTransaction();
             Transaction transaction = session.get(Transaction.class, id);
             if (transaction != null) {
+                // Delete transaction details first
+                transaction.getTransactionDetails().clear();
                 session.delete(transaction);
                 txn.commit();
             }
@@ -198,5 +201,17 @@ public class TransactionDAO {
             return new ArrayList<>();
         }
     }
+
+    // Method to get the next transaction ID
+    public int getNextTransactionId() {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            Integer maxId = session.createQuery("select max(id) from Transaction", Integer.class).uniqueResult();
+            return (maxId != null) ? maxId + 1 : 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 1;
+        }
+    }
 }
+
 
