@@ -1,0 +1,113 @@
+/* General Styles */
+.root {
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 20;
+    -fx-spacing: 10; /* Adjusted spacing for comfort */
+}
+/* Base style for ScrollPane */
+.scroll-pane {
+    -fx-background-color: #f0f0f0; /* Light gray background for the ScrollPane */
+    -fx-border-color: #b0b0b0; /* Light gray border around the ScrollPane */
+    -fx-border-width: 1px; /* Border width around the ScrollPane */
+    -fx-padding: 5px; /* Padding inside the ScrollPane */
+}
+
+/* Style for the viewport inside ScrollPane */
+.scroll-pane .viewport {
+    -fx-background-color: #ffffff; /* White background for the viewport area */
+}
+
+/* ScrollBar styles */
+.scroll-bar {
+    -fx-background-color: #e0e0e0; /* Gray background for the scrollbar track */
+    -fx-background-insets: 0; /* Ensure the background color covers the full area */
+}
+
+/* ScrollBar thumb (draggable part) */
+.scroll-bar .thumb {
+    -fx-background-color: #a0a0a0; /* Medium gray color for the scrollbar thumb */
+    -fx-background-insets: 0; /* Ensure the thumb color covers the full area */
+    -fx-border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+}
+
+/* Hide ScrollBar arrow buttons */
+.scroll-bar .arrow-button {
+    -fx-background-color: transparent; /* Make arrow buttons invisible */
+    -fx-border-width: 0; /* Remove border */
+    -fx-padding: 0; /* Remove padding */
+    -fx-opacity: 0; /* Make the button fully transparent */
+}
+
+/* ScrollBar track (background area of the scrollbar) */
+.scroll-bar .track {
+    -fx-background-color: #e0e0e0; /* Gray color for the scrollbar track */
+}
+
+/* Reduce scrollbar width */
+.scroll-bar:vertical {
+    -fx-pref-width: 10px; /* Minimum width for vertical scrollbar */
+}
+
+.scroll-bar:horizontal {
+    -fx-pref-height: 10px; /* Minimum height for horizontal scrollbar */
+}
+
+
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px; /* Adjusted font size for comfort */
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 20 0;
+}
+
+.sidebar-search {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #95a5a6;
+    -fx-padding: 8; /* Adjusted padding for comfort */
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.sidebar-section-title {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 5 10; /* Adjusted padding for comfort */
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-alignment: baseline-left;
+    -fx-pref-height: 25px;
+    -fx-pref-width: 160px;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #3b5998;
+
+}
+
+.sidebar-button-label {
+    -fx-text-fill: white;
+}
+
+.notification {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 2 6;
+    -fx-background-radius: 10;
+    -fx-alignment: center;
+}

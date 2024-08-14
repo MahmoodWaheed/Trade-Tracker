@@ -1,0 +1,18 @@
+package org.example.dao;
+
+import javafx.collections.ObservableList;
+
+import org.example.model.Product;
+
+import java.util.List;
+
+public interface ItemDao {
+    void saveItem(Product product);
+    ObservableList<Product> getAllItemsByName(String itemName);
+
+    void updateItem(Product product);
+    void deleteItem(int id);
+    Product getItemById(int id);
+    List<Product> getAllItems();
+    int lastId();
+}

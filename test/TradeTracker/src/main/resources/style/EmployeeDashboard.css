@@ -1,0 +1,82 @@
+/* Apply general styles to the entire AnchorPane */
+.root {
+    -fx-background-color: #f4f4f9; /* Very light gray background for a clean look */
+    -fx-padding: 20px; /* Padding around the content */
+}
+
+/* Header title styling */
+.section-title {
+    -fx-font-size: 34px; /* Slightly smaller font size for a balanced look */
+    -fx-font-weight: bold; /* Bold font weight */
+    -fx-text-fill: #212529; /* Almost black color for strong contrast */
+    -fx-padding: 10px; /* Padding around the title */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0, 0, 3); /* Subtle drop shadow */
+}
+
+/* Styling for buttons */
+.action-button {
+    -fx-text-fill: #ffffff; /* White text color for contrast */
+    -fx-font-size: 14px; /* Font size for button text */
+    -fx-padding: 12px; /* Padding inside the button */
+    -fx-border-radius: 6px; /* Slightly rounded corners */
+    -fx-border-color: transparent; /* No border color */
+    -fx-border-width: 0; /* No border width */
+    -fx-min-height: 50px; /* Minimum height */
+    -fx-min-width: 300px; /* Minimum width */
+    -fx-alignment: center; /* Center-align text and content */
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 0, 3); /* Drop shadow effect */
+}
+
+/* Button-specific styles for different actions */
+#addButton {
+    -fx-background-color: #007bff; /* Bright blue for Add button */
+}
+
+#updateButton {
+    -fx-background-color: #6c757d; /* Muted grey-blue for Show Employees button */
+}
+
+#deleteButton {
+    -fx-background-color: #dc3545; /* Professional red for Delete button */
+}
+
+/* Button hover effects */
+#addButton:hover {
+    -fx-background-color: #0056b3; /* Darker blue on hover for Add button */
+}
+
+#updateButton:hover {
+    -fx-background-color: #5a6268; /* Darker grey-blue on hover for Show Employees button */
+}
+
+#deleteButton:hover {
+    -fx-background-color: #c82333; /* Darker red on hover for Delete button */
+}
+
+/* Employee details or information display */
+.info-display {
+    -fx-background-color: #ffffff; /* White background for info display */
+    -fx-border-radius: 8px; /* Rounded corners */
+    -fx-border-color: #dee2e6; /* Light grey border */
+    -fx-border-width: 1px; /* Border width */
+    -fx-padding: 15px; /* Padding inside the display area */
+    -fx-pref-width: 800px; /* Preferred width */
+    -fx-pref-height: 600px; /* Preferred height */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 8, 0, 0, 5); /* Subtle drop shadow */
+}
+
+/* Placeholder text in the information display */
+.info-placeholder {
+    -fx-font-size: 18px; /* Font size for placeholder text */
+    -fx-text-fill: #6c757d; /* Medium grey text color */
+    -fx-alignment: center; /* Center-align text */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1); /* Subtle shadow for readability */
+}
+
+/* Styling for HBox containers */
+HBox {
+    -fx-spacing: 20px; /* Space between items in HBox */
+    -fx-alignment: center; /* Center-align items */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 2); /* Subtle drop shadow for depth */
+}

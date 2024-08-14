@@ -1,0 +1,116 @@
+/* General Styles */
+.root {
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 20;
+    -fx-background-color: #f4f4f9; /* Light background color */
+}
+
+/* GridPane Styling */
+.grid-pane {
+    -fx-hgap: 15px; /* Horizontal gap between columns */
+    -fx-vgap: 15px; /* Vertical gap between rows */
+    -fx-background-color: #ffffff; /* White background for grid */
+    -fx-padding: 20px; /* Padding inside the grid */
+    -fx-border-radius: 10px; /* Rounded corners */
+    -fx-border-color: #dddddd; /* Light gray border */
+    -fx-border-width: 1px; /* Border width */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2); /* Shadow effect */
+}
+
+/* Label Styling */
+.label {
+    -fx-text-fill: #333333; /* Dark gray text color */
+    -fx-font-weight: normal;
+    -fx-font-size: 14px;
+}
+
+/* TextField Styling */
+.text-field {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 8px; /* Padding inside the text field */
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+    -fx-prompt-text-fill: #aaaaaa; /* Light gray prompt text */
+}
+
+/* TextField Focus Styling */
+.text-field:focused {
+    -fx-border-color: #4CAF50; /* Green border on focus */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 128, 0, 0.2), 5, 0, 0, 1);
+}
+
+/* DatePicker Styling */
+.date-picker {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+/* DatePicker Focus Styling */
+.date-picker:focused {
+    -fx-border-color: #4CAF50; /* Green border on focus */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 128, 0, 0.2), 5, 0, 0, 1);
+}
+
+/* ComboBox Styling */
+.combo-box {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+/* ComboBox Focus Styling */
+.combo-box:focused {
+    -fx-border-color: #4CAF50; /* Green border on focus */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 128, 0, 0.2), 5, 0, 0, 1);
+}
+
+/* Button Styling */
+.button {
+    -fx-background-color: linear-gradient(#4CAF50, #45a049); /* Gradient background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand; /* Change cursor to pointer */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 1);
+    -fx-background-insets: 0,1,2;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#45a049, #4CAF50); /* Inverted gradient on hover */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 1); /* Stronger shadow on hover */
+}
+
+/* Label for Results */
+.label#result {
+    -fx-text-fill: #ff0000; /* Red text for results */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* AnchorPane Styling */
+.anchor-pane {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #dddddd; /* Light gray border */
+    -fx-border-radius: 10px; /* Rounded corners */
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2); /* Shadow effect */
+}
+
+/* Button Animation */
+.button:pressed {
+    -fx-background-color: linear-gradient(#45a049, #4CAF50); /* Inverted gradient on press */
+    -fx-effect: none; /* Remove shadow on press */
+    -fx-padding: 11px 21px 9px 19px; /* Adjust padding to create "pressed" effect */
+}

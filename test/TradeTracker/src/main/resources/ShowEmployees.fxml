@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="showEmployeeAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="1320.0" prefHeight="600.0" prefWidth="900.0" stylesheets="@style/ShowEmployees.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.ShowEmployeesController">
+   <children>
+      <TableView fx:id="tableView" editable="true" layoutX="10.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showButton" onMouseMoved="#showButton" prefHeight="307.0" prefWidth="585.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+        <columns>
+          <TableColumn fx:id="employeeId" prefWidth="40.0" text="ID" />
+          <TableColumn fx:id="employeeName" prefWidth="160.0" text="Name" />
+            <TableColumn fx:id="department" text="Department" />
+            <TableColumn fx:id="title" text="Title" />
+            <TableColumn fx:id="salary" text="Salary" />
+            <TableColumn fx:id="gender" text="Gender" />
+            <TableColumn fx:id="hireDate" prefWidth="160.0" text="Hire Date" />
+            <TableColumn fx:id="birthDate" prefWidth="160.0" text="Birth Date" />
+            <TableColumn fx:id="emailAddress" prefWidth="160.0" text="Email Address" />
+            <TableColumn fx:id="phoneNumber" prefWidth="160.0" text="Phone Number" />
+            <TableColumn fx:id="address" prefWidth="160.0" text="Address" />
+        </columns>
+      </TableView>
+      <HBox alignment="TOP_RIGHT" prefHeight="39.0" prefWidth="380.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handelDeleteButton" prefHeight="39.0" prefWidth="164.0" text="Delete Employee" />
+            <Button fx:id="updateButton" maxWidth="200.0" mnemonicParsing="false" onAction="#updateEmployee" text="Update Employee" />
+         </children>
+      </HBox>
+      <TextField fx:id="nameToSearch" layoutX="27.0" layoutY="34.0" onKeyTyped="#HandelSearchByName" onMouseClicked="#HandelSearchByName" prefHeight="35.0" promptText="Search.." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="5.0" />
+      <Button fx:id="searchButton" layoutX="525.0" layoutY="5.0" mnemonicParsing="false" onAction="#HandelSearchByName" text="Search" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+   </children>
+
+</AnchorPane>

@@ -1,0 +1,76 @@
+/* General Styles */
+.root {
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 20;
+    -fx-background-color: #f0f0f5; /* Light background color */
+}
+
+/* AnchorPane Styling */
+.anchor-pane {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #dddddd; /* Light gray border */
+    -fx-border-radius: 10px; /* Rounded corners */
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2); /* Shadow effect */
+}
+
+/* TableView Styling */
+.table-view {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #dddddd; /* Light gray border */
+    -fx-border-radius: 10px; /* Rounded corners */
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2); /* Shadow effect */
+}
+
+.table-column-header {
+    -fx-background-color: #f8f8f8; /* Light background for column headers */
+    -fx-text-fill: #333333; /* Dark gray text for headers */
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #ffffff; /* White background for rows */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f4f4f9; /* Alternating row color */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #4CAF50; /* Green background for selected row */
+    -fx-text-fill: white; /* White text for selected row */
+}
+
+/* Button Styling */
+.button {
+    -fx-background-color: linear-gradient(#4CAF50, #45a049); /* Gradient background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand; /* Change cursor to pointer */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 1);
+    -fx-background-insets: 0,1,2;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#45a049, #4CAF50); /* Inverted gradient on hover */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 1); /* Stronger shadow on hover */
+}
+
+/* Button Animation */
+.button:pressed {
+    -fx-background-color: linear-gradient(#45a049, #4CAF50); /* Inverted gradient on press */
+    -fx-effect: none; /* Remove shadow on press */
+    -fx-padding: 11px 21px 9px 19px; /* Adjust padding to create "pressed" effect */
+}
+
+/* Label for Results */
+.label#result {
+    -fx-text-fill: #ff0000; /* Red text for results */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}

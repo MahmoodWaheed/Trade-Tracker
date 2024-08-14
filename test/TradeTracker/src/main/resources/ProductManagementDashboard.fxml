@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="productManagementAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="1320.0" prefHeight="600.0" prefWidth="900.0" stylesheets="@style/ShowEmployees.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.ProductDashController">
+   <children>
+      <TableView fx:id="tableView" editable="true" layoutX="10.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showButton" onMouseMoved="#showButton" prefHeight="307.0" prefWidth="585.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <columns>
+            <TableColumn fx:id="productId" minWidth="200.0" prefWidth="40.0" text="ID" />
+            <TableColumn fx:id="ProductName" minWidth="300.0" prefWidth="160.0" text="Product Name" />
+            <TableColumn fx:id="category" minWidth="300.0" text="Category" />
+            <TableColumn fx:id="stockQuantity" minWidth="260.0" text="Stock Quantity" />
+            <TableColumn fx:id="price" minWidth="200.0" text="Price" />
+         </columns>
+      </TableView>
+      <HBox alignment="TOP_RIGHT" prefHeight="39.0" prefWidth="813.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handelProductDetailsButton" text="Product Details" />
+            <Button mnemonicParsing="false" onAction="#handelDeleteProductButton" text="Delete Product" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handelEditProductButton" prefHeight="39.0" prefWidth="164.0" text="Edit Product" />
+            <Button fx:id="updateButton" maxWidth="200.0" mnemonicParsing="false" onAction="#handelAddNewProductButton" text="Add New Product" />
+         </children>
+      </HBox>
+      <TextField fx:id="nameToSearch" layoutX="27.0" layoutY="34.0" onKeyTyped="#HandelSearchByName" onMouseClicked="#HandelSearchByName" prefHeight="35.0" promptText="Search.." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="5.0" />
+      <Button fx:id="searchButton" layoutX="525.0" layoutY="5.0" mnemonicParsing="false" onAction="#HandelSearchByName" text="Search" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+   </children>
+</AnchorPane>
