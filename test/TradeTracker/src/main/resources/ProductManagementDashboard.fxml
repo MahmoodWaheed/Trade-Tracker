@@ -20,10 +20,10 @@
       </TableView>
       <HBox alignment="TOP_RIGHT" prefHeight="39.0" prefWidth="813.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handelProductDetailsButton" text="Product Details" />
-            <Button mnemonicParsing="false" onAction="#handelDeleteProductButton" text="Delete Product" />
-            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handelEditProductButton" prefHeight="39.0" prefWidth="164.0" text="Edit Product" />
-            <Button fx:id="updateButton" maxWidth="200.0" mnemonicParsing="false" onAction="#handelAddNewProductButton" text="Add New Product" />
+            <Button fx:id="detailsButton" mnemonicParsing="false" onAction="#handelProductDetailsButton" text="Product Details" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handelDeleteProductButton" text="Delete Product" />
+            <Button fx:id="editButton" mnemonicParsing="false" onAction="#handelEditProductButton" prefHeight="39.0" prefWidth="164.0" text="Edit Product" />
+            <Button maxWidth="200.0" mnemonicParsing="false" onAction="#handelAddNewProductButton" text="Add New Product" />
          </children>
       </HBox>
       <TextField fx:id="nameToSearch" layoutX="27.0" layoutY="34.0" onKeyTyped="#HandelSearchByName" onMouseClicked="#HandelSearchByName" prefHeight="35.0" promptText="Search.." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="5.0" />

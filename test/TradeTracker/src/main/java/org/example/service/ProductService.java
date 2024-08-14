@@ -38,7 +38,7 @@ public class ProductService implements ItemDao {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-        Query<Product> query = session.createQuery("from Category where name like :name", Product.class);
+        Query<Product> query = session.createQuery("from Product where name like :name", Product.class);
         query.setParameter("name",itemName.toLowerCase()+ "%");
         products = FXCollections.observableArrayList(query.getResultList());
 
@@ -60,11 +60,11 @@ public class ProductService implements ItemDao {
     }
 
     @Override
-    public void deleteItem(int id) {
+    public void deleteItem(Product product) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-        session.delete(id);
+        session.delete(product);
 
         session.getTransaction().commit();
         session.close();

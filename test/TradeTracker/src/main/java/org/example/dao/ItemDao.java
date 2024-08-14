@@ -11,7 +11,7 @@ public interface ItemDao {
     ObservableList<Product> getAllItemsByName(String itemName);
 
     void updateItem(Product product);
-    void deleteItem(int id);
+    void deleteItem(Product product);
     Product getItemById(int id);
     List<Product> getAllItems();
     int lastId();

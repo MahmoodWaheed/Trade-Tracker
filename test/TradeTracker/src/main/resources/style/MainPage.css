@@ -3,6 +3,10 @@
     -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.sidebar-button.active {
+    -fx-background-color: #2980b9; /* A different color for the active button */
+    -fx-text-fill: #ecf0f1; /* Change text color if needed */
+}
 /* Sidebar Styles */
 .sidebar {
     -fx-background-color: #2c3e50;

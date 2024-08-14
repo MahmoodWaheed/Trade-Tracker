@@ -5,7 +5,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -14,7 +13,6 @@ import javafx.stage.Stage;
 import org.example.model.Employee;
 import org.example.service.EmployeeService;
 
-import java.io.IOException;
 import java.sql.Date;
 
 public class AddEmployeeController {
@@ -92,7 +90,7 @@ public class AddEmployeeController {
         });
     }
 
-    public void intializeData(Employee employee) {
+    public void initializeData(Employee employee) {
 
         employeeId.setText(String.valueOf(employee.getEmployeeId()));
         employeeId.setDisable(true);

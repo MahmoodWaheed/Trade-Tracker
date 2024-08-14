@@ -5,19 +5,14 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import org.example.model.Employee;
 import org.example.service.EmployeeService;
 
 
-import java.io.IOException;
 import java.sql.Date;
 import java.util.List;
 
@@ -92,7 +87,7 @@ public class ShowEmployeesController {
         showEmployeeAnchorPane.getChildren().setAll(content);
 
         AddEmployeeController addEmployeeController = loader.getController();
-        addEmployeeController.intializeData(employee);
+        addEmployeeController.initializeData(employee);
     }
 
 

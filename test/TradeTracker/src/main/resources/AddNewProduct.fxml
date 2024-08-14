@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane minHeight="650.0" minWidth="1350.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AddNewProductController">
+<AnchorPane fx:id="addProductAnchorPane" minHeight="650.0" minWidth="1350.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AddNewProductController">
     <GridPane hgap="50.0" vgap="50.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="50.0">
 
 
         <!-- Product ID -->
         <Label text="Product ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-        <TextField fx:id="idField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="idField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
         <!-- Product Name -->
         <Label text="Product Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
