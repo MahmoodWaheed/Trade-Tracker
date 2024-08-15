@@ -19,7 +19,7 @@
                   <TextField promptText="Search" styleClass="sidebar-search" />
                   <Label styleClass="sidebar-section-title" text="Application" />
                   <Button fx:id="productDashButton" onAction="#handelProductManageButtonInDashboard" styleClass="sidebar-button" text="Products Management" />
-                  <Button styleClass="sidebar-button" text="Timeline" />
+                  <Button onAction="#handelPersonButton" styleClass="sidebar-button" text="Peresons" />
                   <Button styleClass="sidebar-button" text="Users" />
                   <Button fx:id="employeeDashButton" mnemonicParsing="false" onAction="#handelEmployeeButtonInDashboard" styleClass="sidebar-button" text="Employees" />
                   <Label styleClass="sidebar-section-title" text="Others" />

@@ -6,7 +6,7 @@ import org.example.model.Product;
 
 import java.util.List;
 
-public interface ItemDao {
+public interface ProductDao {
     void saveItem(Product product);
     ObservableList<Product> getAllItemsByName(String itemName);
 

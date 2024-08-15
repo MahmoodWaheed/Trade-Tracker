@@ -9,7 +9,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import org.example.model.Employee;
 import org.example.model.Product;
 import org.example.service.ProductService;
 
@@ -57,7 +56,7 @@ public class ProductDashController {
 
     @FXML
     void handelAddNewProductButton(ActionEvent event) throws Exception {
-        loadContent("AddNewProduct.fxml");
+        loadContent("AddProduct.fxml");
     }
 
     @FXML
@@ -77,7 +76,7 @@ public class ProductDashController {
     @FXML
     void handelEditProductButton(ActionEvent event) throws Exception {
         Product product = tableView.getSelectionModel().getSelectedItem();
-        loadContent("AddNewProduct.fxml",product);
+        loadContent("AddProduct.fxml",product);
 
     }
 

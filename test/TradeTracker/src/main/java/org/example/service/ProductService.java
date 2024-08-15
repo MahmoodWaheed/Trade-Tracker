@@ -2,7 +2,7 @@ package org.example.service;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import org.example.dao.ItemDao;
+import org.example.dao.ProductDao;
 
 import org.example.model.Product;
 import org.hibernate.Session;
@@ -12,7 +12,7 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class ProductService implements ItemDao {
+public class ProductService implements ProductDao {
 
     private SessionFactory sessionFactory;
 

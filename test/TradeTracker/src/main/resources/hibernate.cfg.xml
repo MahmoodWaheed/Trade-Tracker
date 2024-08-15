@@ -35,8 +35,14 @@
 <!--        <mapping class="org.example.model.Product" />-->
         <mapping class="org.example.model.Employee" />
         <mapping class="org.example.model.Product" />
-<!--        <mapping class="org.example.model.Category" />-->
-<!--        <mapping class="org.example.model.Supplier" />-->
+        <mapping class="org.example.model.Person" />
+        <mapping class="org.example.model.PurchaseDetail" />
+        <mapping class="org.example.model.PurchaseTransaction" />
+        <mapping class="org.example.model.Transaction" />
+        <mapping class="org.example.model.TransactionDetail" />
+
+
+
 
 
 

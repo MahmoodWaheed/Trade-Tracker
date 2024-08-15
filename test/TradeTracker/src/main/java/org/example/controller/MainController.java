@@ -5,12 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.beans.property.DoubleProperty;
-import javafx.scene.layout.AnchorPane;
-
-
-import java.io.IOException;
-import java.util.List;
 
 public class MainController {
 
@@ -46,6 +40,10 @@ public class MainController {
     private void handelEmployeeButtonInDashboard() throws Exception {
         loadContent("EmployeeDashboard.fxml");
     }
+    @FXML
+    void handelPersonButton(ActionEvent event) throws Exception {
+        loadContent("PersonDashboard.fxml");
+    }
 
     private void loadContent(String fxmlFile) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource(fxmlFile));
@@ -57,6 +55,6 @@ public class MainController {
     }
 
     public void handelProductManageButtonInDashboard(ActionEvent actionEvent) throws Exception {
-        loadContent("ProductManagementDashboard.fxml");
+        loadContent("ProductDashboard.fxml");
     }
 }

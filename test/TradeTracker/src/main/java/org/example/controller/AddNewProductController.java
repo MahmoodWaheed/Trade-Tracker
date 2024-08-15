@@ -9,7 +9,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import org.example.model.Employee;
 import org.example.model.Product;
 import org.example.service.ProductService;
 
@@ -47,13 +46,13 @@ public class AddNewProductController {
         if(productService.getItemById(id)!=null){
             Product product = new Product(id,name, price, count, category);
             productService.updateItem(product);
-            loadContent("ProductManagementDashboard.fxml");
+            loadContent("ProductDashboard.fxml");
         }else {
 
             Product product = new Product(name, price, count, category);
 
             productService.saveItem(product);
-            loadContent("AddNewProduct.fxml");
+            loadContent("AddProduct.fxml");
         }
 
 
